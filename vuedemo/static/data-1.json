@@ -1,0 +1,131 @@
+{
+	"allData":[
+		{
+			"thumbnail":"static/thumbnail/ask/ask (1).jpg",
+			"src":"static/img/askimg/ask-1.jpg",
+			"title":"我把 Toolbar 转了一下变成了菜单 ",
+			"content":"思路看上去好像 Toolbar 变成了菜单，但大家也能猜到，这里面的旋转菜单其实和 Toolbar 是两个控件，左上角的菜单按钮也是也是两个按钮，只不过在同样的位置放了同样的图片。所以我自定义了一个旋转控件 SpringRotateMenu，继承 FrameLayout，在这里面实现旋转动画及手势操作。旋转动画Gif 图可能不明显，菜单展开和收起的时候是会抖一下的，有一种「DUANG」的感觉。是不是有种弹簧的感觉？没错，我用的就是新出的弹簧动画（SpringAnimation）。关于 SpringAnimation，我之前的这篇会有更详细的介绍：实现一个带下拉弹簧动画的 ScrollViewexpandAnimation = new SpringAnimation(this, SpringAnimation.ROTATION, ROTATE_EXPAND);collapseAnimation = new SpringAnimation(this, SpringAnimation.ROTATION, ROTATE_COLLAPSE);需要注意的是第三个参数。在平移动画里面，第三个参数是偏移量，而在旋转动画里面代表的是度数。在这里我定义了展开动画（旋转到0°）及收起动画（旋转到 -90°）。然后提供两个方法来设置展开和收起的按钮：",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (2).jpg",
+			"src":"static/img/askimg/ask-2.jpg",
+			"title":"EmojiIntelligence：通过智能学习技术识别 Emoji 表情包",
+			"content":"The input to my network has 64 binary numbers. These inputs are connected to the neurons in the hidden layer. The hidden layer performs some computation and passes the result to the output layer neuron out. This also performs a computation and then outputs a 0 or a 1. The input layer doesn’t actually do anything, they are just placeholders for the input value. Only the neurons in the hidden layer and the output layer perform computations. The neurons from the input layer are connected to the neurons in the hidden layer. Likewise, both neurons from the hidden layer are connected to the output layer. These kinds of layers are called fully-connected because every neuron is connected to every neuron in the next layer. Each connection between two neurons has a weight, which is just a number. These weights form the brain of my network. For the activation function in my network, I use the sigmoid function.",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (3).jpg",
+			"src":"static/img/askimg/ask-3.jpg",
+			"title":"爬虫入门系列（二）：优雅的HTTP库requests",
+			"content":"在系列文章的第一篇中介绍了 HTTP 协议，Python 提供了很多模块来基于 HTTP 协议的网络编程，urllib、urllib2、urllib3、httplib、httplib2，都是和 HTTP 相关的模块，看名字觉得很反人类，更糟糕的是这些模块在 Python2 与 Python3 中有很大的差异，如果业务代码要同时兼容 2 和 3，写起来会让人崩溃。",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (4).jpg",
+			"src":"static/img/askimg/ask-4.jpg",
+			"title":"十五分钟用 JavaScript 基础写一个简易计算器 + 思路详解",
+			"content":"这个小练手旨在帮助刚上手学习JavaScript的同学练习最基本的Js知识，大神勿喷哈，由于这个是非常简易的计算器，可以完成的功能有加减乘除和AC（清屏），DEL（退格）等基本运算，所以代码也不复杂，我会先放出代码，然后再讲解我的思路，非常简单，只要你按照我的思路走，15分钟不到我保证你也可以敲出同样的代码，当然主要还是希望可以为入门的同学提供一种解决问题的思路，各位看完后可以自己动手敲一遍哈。",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (5).jpg",
+			"src":"static/img/askimg/ask-5.jpg",
+			"title":"页面性能优化的利器 — Timeline",
+			"content":"网页中的重绘过程是影响整体性能下降的关键点之一，因而网站开发者应该更多地去避免在站点中进行不必要以及不适时的重绘步骤，本文主要讲述如何借助 Inspector 中的 Timeline 面板去剖析这一些存在的问题。* JavaScript。一般来说，我们会使用JavaScript来实现一些视觉变化的效果。比如用jQuery的animate函数做一个动画、对一个数据集进行排序、或者往页面里添加一些DOM元素等。当然，除了JavaScript，还有其他一些常用方法也可以实现视觉变化效果，比如：CSS Animations, Transitions和Web Animation API。",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (6).jpg",
+			"src":"static/img/askimg/ask-6.jpg",
+			"title":"函数式编程的兴衰与当前之崛起",
+			"content":"在计算机科学刚刚起步的时候，很多计算机科学的理论都还没有落地。那时候有两个伟大的计算机科学家：阿隆佐·丘奇和阿兰·图灵。他们创造了两个不同的，但是具有同等效力的通用计算模型。两个模型都可以计算任何可以计算的东西（着重强调，“通用”）。",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (7).jpg",
+			"src":"static/img/askimg/ask-7.jpg",
+			"title":"代码即逻辑 -- 聊聊 Effects 及在 Angular 中的应用",
+			"content":"大概去年9月左右，看过 Cycle.js 创作者 André Staltz 的一个视频：讲为什么 React 并不是一个响应式的框架，同时介绍了 Cycle.js。当时就觉得这个思路好牛叉，但一直有点似懂非懂。最近由于工作需要，在 Angular 中使用了 @ngrx/effects （这个是借鉴了 Cycle.js 的思路，把这种思路应用在 Angular 中），对这个模式有了些粗浅认识，这里和大家分享。本文需要您了解 rxjs 和 @ngrx/store (Redux 在 Angular 中的实现)。这些前置知识可以从本人以前写过一些文章获得： Angular 从0到1：Rx -- 隐藏在 Angular 中的利剑 和 Redux你的 Angular 应用",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (8).jpg",
+			"src":"static/img/askimg/ask-8.jpg",
+			"title":"史上最详细的webpack 讲解2 （DefinePlugin中的淫技巧）",
+			"content":"今天我突然发现我的掘金原创排行已经落到了120位，这是什么原因，因为我分享的不够多，还是我分享的不够好，看的人不多，又好几天没和大家几面了，来吧！死也死在分享上面，怎么说呢，今天讲解的东西也不是很深奥的东西，以前一直没有用到这东西，今天好好看了这东西，可以带来很大的方便，我就给大家举两个例子玩玩",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (2).jpg",
+			"src":"static/img/askimg/ask-2.jpg",
+			"title":"EmojiIntelligence：通过智能学习技术识别 Emoji 表情包",
+			"content":"The input to my network has 64 binary numbers. These inputs are connected to the neurons in the hidden layer. The hidden layer performs some computation and passes the result to the output layer neuron out. This also performs a computation and then outputs a 0 or a 1. The input layer doesn’t actually do anything, they are just placeholders for the input value. Only the neurons in the hidden layer and the output layer perform computations. The neurons from the input layer are connected to the neurons in the hidden layer. Likewise, both neurons from the hidden layer are connected to the output layer. These kinds of layers are called fully-connected because every neuron is connected to every neuron in the next layer. Each connection between two neurons has a weight, which is just a number. These weights form the brain of my network. For the activation function in my network, I use the sigmoid function.",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (1).jpg",
+			"src":"static/img/askimg/ask-1.jpg",
+			"title":"我把 Toolbar 转了一下变成了菜单 ",
+			"content":"思路看上去好像 Toolbar 变成了菜单，但大家也能猜到，这里面的旋转菜单其实和 Toolbar 是两个控件，左上角的菜单按钮也是也是两个按钮，只不过在同样的位置放了同样的图片。所以我自定义了一个旋转控件 SpringRotateMenu，继承 FrameLayout，在这里面实现旋转动画及手势操作。旋转动画Gif 图可能不明显，菜单展开和收起的时候是会抖一下的，有一种「DUANG」的感觉。是不是有种弹簧的感觉？没错，我用的就是新出的弹簧动画（SpringAnimation）。关于 SpringAnimation，我之前的这篇会有更详细的介绍：实现一个带下拉弹簧动画的 ScrollViewexpandAnimation = new SpringAnimation(this, SpringAnimation.ROTATION, ROTATE_EXPAND);collapseAnimation = new SpringAnimation(this, SpringAnimation.ROTATION, ROTATE_COLLAPSE);需要注意的是第三个参数。在平移动画里面，第三个参数是偏移量，而在旋转动画里面代表的是度数。在这里我定义了展开动画（旋转到0°）及收起动画（旋转到 -90°）。然后提供两个方法来设置展开和收起的按钮：",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (3).jpg",
+			"src":"static/img/askimg/ask-3.jpg",
+			"title":"爬虫入门系列（二）：优雅的HTTP库requests",
+			"content":"在系列文章的第一篇中介绍了 HTTP 协议，Python 提供了很多模块来基于 HTTP 协议的网络编程，urllib、urllib2、urllib3、httplib、httplib2，都是和 HTTP 相关的模块，看名字觉得很反人类，更糟糕的是这些模块在 Python2 与 Python3 中有很大的差异，如果业务代码要同时兼容 2 和 3，写起来会让人崩溃。",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (8).jpg",
+			"src":"static/img/askimg/ask-8.jpg",
+			"title":"史上最详细的webpack 讲解2 （DefinePlugin中的淫技巧）",
+			"content":"今天我突然发现我的掘金原创排行已经落到了120位，这是什么原因，因为我分享的不够多，还是我分享的不够好，看的人不多，又好几天没和大家几面了，来吧！死也死在分享上面，怎么说呢，今天讲解的东西也不是很深奥的东西，以前一直没有用到这东西，今天好好看了这东西，可以带来很大的方便，我就给大家举两个例子玩玩",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (5).jpg",
+			"src":"static/img/askimg/ask-5.jpg",
+			"title":"页面性能优化的利器 — Timeline",
+			"content":"网页中的重绘过程是影响整体性能下降的关键点之一，因而网站开发者应该更多地去避免在站点中进行不必要以及不适时的重绘步骤，本文主要讲述如何借助 Inspector 中的 Timeline 面板去剖析这一些存在的问题。* JavaScript。一般来说，我们会使用JavaScript来实现一些视觉变化的效果。比如用jQuery的animate函数做一个动画、对一个数据集进行排序、或者往页面里添加一些DOM元素等。当然，除了JavaScript，还有其他一些常用方法也可以实现视觉变化效果，比如：CSS Animations, Transitions和Web Animation API。",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (4).jpg",
+			"src":"static/img/askimg/ask-4.jpg",
+			"title":"十五分钟用 JavaScript 基础写一个简易计算器 + 思路详解",
+			"content":"这个小练手旨在帮助刚上手学习JavaScript的同学练习最基本的Js知识，大神勿喷哈，由于这个是非常简易的计算器，可以完成的功能有加减乘除和AC（清屏），DEL（退格）等基本运算，所以代码也不复杂，我会先放出代码，然后再讲解我的思路，非常简单，只要你按照我的思路走，15分钟不到我保证你也可以敲出同样的代码，当然主要还是希望可以为入门的同学提供一种解决问题的思路，各位看完后可以自己动手敲一遍哈。",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (1).jpg",
+			"src":"static/img/askimg/ask-1.jpg",
+			"title":"我把 Toolbar 转了一下变成了菜单 ",
+			"content":"思路看上去好像 Toolbar 变成了菜单，但大家也能猜到，这里面的旋转菜单其实和 Toolbar 是两个控件，左上角的菜单按钮也是也是两个按钮，只不过在同样的位置放了同样的图片。所以我自定义了一个旋转控件 SpringRotateMenu，继承 FrameLayout，在这里面实现旋转动画及手势操作。旋转动画Gif 图可能不明显，菜单展开和收起的时候是会抖一下的，有一种「DUANG」的感觉。是不是有种弹簧的感觉？没错，我用的就是新出的弹簧动画（SpringAnimation）。关于 SpringAnimation，我之前的这篇会有更详细的介绍：实现一个带下拉弹簧动画的 ScrollViewexpandAnimation = new SpringAnimation(this, SpringAnimation.ROTATION, ROTATE_EXPAND);collapseAnimation = new SpringAnimation(this, SpringAnimation.ROTATION, ROTATE_COLLAPSE);需要注意的是第三个参数。在平移动画里面，第三个参数是偏移量，而在旋转动画里面代表的是度数。在这里我定义了展开动画（旋转到0°）及收起动画（旋转到 -90°）。然后提供两个方法来设置展开和收起的按钮：",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (2).jpg",
+			"src":"static/img/askimg/ask-2.jpg",
+			"title":"EmojiIntelligence：通过智能学习技术识别 Emoji 表情包",
+			"content":"The input to my network has 64 binary numbers. These inputs are connected to the neurons in the hidden layer. The hidden layer performs some computation and passes the result to the output layer neuron out. This also performs a computation and then outputs a 0 or a 1. The input layer doesn’t actually do anything, they are just placeholders for the input value. Only the neurons in the hidden layer and the output layer perform computations. The neurons from the input layer are connected to the neurons in the hidden layer. Likewise, both neurons from the hidden layer are connected to the output layer. These kinds of layers are called fully-connected because every neuron is connected to every neuron in the next layer. Each connection between two neurons has a weight, which is just a number. These weights form the brain of my network. For the activation function in my network, I use the sigmoid function.",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (7).jpg",
+			"src":"static/img/askimg/ask-7.jpg",
+			"title":"代码即逻辑 -- 聊聊 Effects 及在 Angular 中的应用",
+			"content":"大概去年9月左右，看过 Cycle.js 创作者 André Staltz 的一个视频：讲为什么 React 并不是一个响应式的框架，同时介绍了 Cycle.js。当时就觉得这个思路好牛叉，但一直有点似懂非懂。最近由于工作需要，在 Angular 中使用了 @ngrx/effects （这个是借鉴了 Cycle.js 的思路，把这种思路应用在 Angular 中），对这个模式有了些粗浅认识，这里和大家分享。本文需要您了解 rxjs 和 @ngrx/store (Redux 在 Angular 中的实现)。这些前置知识可以从本人以前写过一些文章获得： Angular 从0到1：Rx -- 隐藏在 Angular 中的利剑 和 Redux你的 Angular 应用",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/ask/ask (6).jpg",
+			"src":"static/img/askimg/ask-6.jpg",
+			"title":"函数式编程的兴衰与当前之崛起",
+			"content":"在计算机科学刚刚起步的时候，很多计算机科学的理论都还没有落地。那时候有两个伟大的计算机科学家：阿隆佐·丘奇和阿兰·图灵。他们创造了两个不同的，但是具有同等效力的通用计算模型。两个模型都可以计算任何可以计算的东西（着重强调，“通用”）。",			
+			"author":"霹雳天下"
+		}
+	]
+
+}

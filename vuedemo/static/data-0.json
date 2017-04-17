@@ -1,0 +1,131 @@
+{
+	"allData":[
+		{
+			"thumbnail":"static/thumbnail/share/share (1).jpg",
+			"src":"static/img/shareimg/share-2.jpg",
+			"title":"平时自己项目中用到的 CSS",
+			"content":"css有些属性容易忘记，半天不写就要去查api，有时候api还不好使，于是还是记下来以后方便用，后续会慢慢补充进来的。",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (2).jpg",
+			"src":"static/img/shareimg/share-2.jpg",
+			"title":"Vue.js 插件开发详解",
+			"content":"随着 Vue.js 越来越火，Vue.js 的相关插件也在不断的被贡献出来，数不胜数。比如官方推荐的 vue-router、vuex 等，都是非常优秀的插件。但是我们更多的人还只停留在使用的阶段，比较少自己开发。所以接下来会通过一个简单的 vue-toast 插件，来了解掌握插件的开发和使用。",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (3).jpg",
+			"src":"static/img/shareimg/share-3.jpg",
+			"title":"程序员，你是选择25k的996还是18k的8小时工作日？",
+			"content":"说到程序员这个职业，大多数人看法都是加班多，工资高，容易猝死的工作。一直记得在我高考选专业的时候，我是把计算机编程排除在外的，然后选了一个通信工程专业，然而毕业后我还是没逃脱编程这个行业。从事软件开发工作以来，我还没遇到996工作制的公司，也没遇到严重加班的公司，可能我是个假程序猿，除了项目上线的时候加班，其他时间正常上下班。我也一直觉得能够在工作时间完成的工作尽量在工作时间高效率解决，如果因为一项工作而导致自己加班，我们一定要反省自己为何会这样，是自己的时间规划上除了问题，还是工作效率没跟上？但是如果是公司要求的加班，我们就得好好讨论一下了。目前，很多互联网公司都在效仿BAT的996工作制和KPI考核制度。更有甚者，有些公司，还有一种加班文化，到点了，没人下班，也没人敢下班，因为大家都还在忙于工作，没有一个人走，大家都不好意思走。如果你遇到这种公司，请考虑清楚再去吧。如果你年纪不大，不要为了钱加班996，这样你会身心疲惫，没有时间学习。技术革新非常快，不充电的话，只会慢慢被淘汰。钱是赚不完的，可以慢慢赚。有句话说的好——“拿得多，不如拿得久”，身体才是革命的本钱。如果你年纪比较大，可能也已经成家，加班996可能吃不消，还要忙着操持整个家庭，估计也无心于996的工作制。",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (4).jpg",
+			"src":"static/img/shareimg/share-4.jpg",
+			"title":"Vue.js 插件开发详解",
+			"content":"随着 Vue.js 越来越火，Vue.js 的相关插件也在不断的被贡献出来，数不胜数。比如官方推荐的 vue-router、vuex 等，都是非常优秀的插件。但是我们更多的人还只停留在使用的阶段，比较少自己开发。所以接下来会通过一个简单的 vue-toast 插件，来了解掌握插件的开发和使用。",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (5).jpg",
+			"src":"static/img/shareimg/share-5.jpg",
+			"title":"平时自己项目中用到的 CSS",
+			"content":"freeCodeCamp 社区每周都会产出数十亿字节的数据。其中最活跃的部分是聊天室系统。成千上万的人在这里聊技术，互相帮助，提高自己的编码技术。我经常问一些关于数据的问题，这周我突然想到，跟开发人员学习相关的 GitHub 仓库都有什么呢？对于排在前面的仓库是什么非常好奇，于是我分析了 freeCodeCamp 的主聊天室中大量的历史聊天记录。本文给出我的分析结果，10 个提及最多的 GitHub 仓库。1. freeCodeCamp/freeCodeCamp也许你早就预料到了 freeCodeCamp 是第一的，这不仅仅是因为数据是从 freeCodeCamp 来的。freeCodeCamp 社区学习平台本身就名声在外，有近 250k 的 star，10k 多的 fork，并且每周都会有上百的 issue 和 pull request。因此人们在聊天室中提及的也非常多。2. getify/You-Dont-Know-JSKyle Simpson 的“你所不知道的 JavaScript” 是 freeCodeCamp 社区无可争议的非官方参考文档。Kyle 本人现在正在从事另一个和 YDKJS 类似的项目，“Functional Light JS”，这个项目也逐渐的越来越多地被提及。3. vhf/free-programming-books这是一个经常更新的免费资源列表。这个库的资源来自世界各地，并且组织方式也很好。它里面包括了：书籍，播客，网站，开发者工具等。很显然，这是一个正在学习写代码的人所“必备的”。4. twbs/bootstrapBootstrap，是一个非常出名的响应式 Web 设计框架。这个库主要是提供技术信息，也包含了一些链接，链到其他有用的网站。如果你想要了解关于这个框架更多的细节性文档，你应该来这个网站学习：getbootstrap.com。",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (6).jpg",
+			"src":"static/img/shareimg/share-6.jpg",
+			"title":"10 个开发新人提及最多的 GitHub Repo",
+			"content":"三篇基础发布之后，收到最多的就是谢谢楼主，其次的就是错别字有点多，这篇我肯定写完之后读三遍，现在已经是夜里2点了，如果还有没有发现大家就容忍一下，这次我将要讲的是条件渲染，对于条件渲染我觉得思来思去真没有什么好写的，但是既然我说过了这个是掘进史上最详细那我就要坚持我的创作，做一个最完整的教程出来，但是如果你真的从头到尾把这文章看下去，我相信你肯定会有收获",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (7).jpg",
+			"src":"static/img/shareimg/share-7.jpg",
+			"title":"前端进阶：透彻掌握 Promise 的使用，读这篇就够了",
+			"content":"Promise的重要性我认为我没有必要多讲，概括起来说就是必须得掌握，而且还要掌握透彻。这篇文章的开头，主要跟大家分析一下，为什么会有Promise出现。在实际的使用当中，有非常多的应用场景我们不能立即知道应该如何继续往下执行。最重要也是最主要的一个场景就是ajax请求。通俗来说，由于网速的不同，可能你得到返回值的时间也是不同的，这个时候我们就需要等待，结果出来了之后才知道怎么样继续下去。",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (8).jpg",
+			"src":"static/img/shareimg/share-8.jpg",
+			"title":"平时自己项目中用到的 CSS",
+			"content":"css有些属性容易忘记，半天不写就要去查api，有时候api还不好使，于是还是记下来以后方便用，后续会慢慢补充进来的。",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (2).jpg",
+			"src":"static/img/shareimg/share-2.jpg",
+			"title":"Vue.js 插件开发详解",
+			"content":"随着 Vue.js 越来越火，Vue.js 的相关插件也在不断的被贡献出来，数不胜数。比如官方推荐的 vue-router、vuex 等，都是非常优秀的插件。但是我们更多的人还只停留在使用的阶段，比较少自己开发。所以接下来会通过一个简单的 vue-toast 插件，来了解掌握插件的开发和使用。",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (1).jpg",
+			"src":"static/img/shareimg/share-1.jpg",
+			"title":"平时自己项目中用到的 CSS",
+			"content":"css有些属性容易忘记，半天不写就要去查api，有时候api还不好使，于是还是记下来以后方便用，后续会慢慢补充进来的。",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (3).jpg",
+			"src":"static/img/shareimg/share-3.jpg",
+			"title":"Vue.js 插件开发详解",
+			"content":"随着 Vue.js 越来越火，Vue.js 的相关插件也在不断的被贡献出来，数不胜数。比如官方推荐的 vue-router、vuex 等，都是非常优秀的插件。但是我们更多的人还只停留在使用的阶段，比较少自己开发。所以接下来会通过一个简单的 vue-toast 插件，来了解掌握插件的开发和使用。",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (8).jpg",
+			"src":"static/img/shareimg/share-8.jpg",
+			"title":"程序员，你是选择25k的996还是18k的8小时工作日？",
+			"content":"说到程序员这个职业，大多数人看法都是加班多，工资高，容易猝死的工作。一直记得在我高考选专业的时候，我是把计算机编程排除在外的，然后选了一个通信工程专业，然而毕业后我还是没逃脱编程这个行业。从事软件开发工作以来，我还没遇到996工作制的公司，也没遇到严重加班的公司，可能我是个假程序猿，除了项目上线的时候加班，其他时间正常上下班。我也一直觉得能够在工作时间完成的工作尽量在工作时间高效率解决，如果因为一项工作而导致自己加班，我们一定要反省自己为何会这样，是自己的时间规划上除了问题，还是工作效率没跟上？但是如果是公司要求的加班，我们就得好好讨论一下了。目前，很多互联网公司都在效仿BAT的996工作制和KPI考核制度。更有甚者，有些公司，还有一种加班文化，到点了，没人下班，也没人敢下班，因为大家都还在忙于工作，没有一个人走，大家都不好意思走。如果你遇到这种公司，请考虑清楚再去吧。如果你年纪不大，不要为了钱加班996，这样你会身心疲惫，没有时间学习。技术革新非常快，不充电的话，只会慢慢被淘汰。钱是赚不完的，可以慢慢赚。有句话说的好——“拿得多，不如拿得久”，身体才是革命的本钱。如果你年纪比较大，可能也已经成家，加班996可能吃不消，还要忙着操持整个家庭，估计也无心于996的工作制。",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (5).jpg",
+			"src":"static/img/shareimg/share-5.jpg",
+			"title":"Vue.js 插件开发详解",
+			"content":"随着 Vue.js 越来越火，Vue.js 的相关插件也在不断的被贡献出来，数不胜数。比如官方推荐的 vue-router、vuex 等，都是非常优秀的插件。但是我们更多的人还只停留在使用的阶段，比较少自己开发。所以接下来会通过一个简单的 vue-toast 插件，来了解掌握插件的开发和使用。",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (4).jpg",
+			"src":"static/img/shareimg/share-4.jpg",
+			"title":"平时自己项目中用到的 CSS",
+			"content":"css有些属性容易忘记，半天不写就要去查api，有时候api还不好使，于是还是记下来以后方便用，后续会慢慢补充进来的。",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (1).jpg",
+			"src":"static/img/shareimg/share-1.jpg",
+			"title":"Vue.js 插件开发详解",
+			"content":"随着 Vue.js 越来越火，Vue.js 的相关插件也在不断的被贡献出来，数不胜数。比如官方推荐的 vue-router、vuex 等，都是非常优秀的插件。但是我们更多的人还只停留在使用的阶段，比较少自己开发。所以接下来会通过一个简单的 vue-toast 插件，来了解掌握插件的开发和使用。",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (2).jpg",
+			"src":"static/img/shareimg/share-2.jpg",
+			"title":"Vue.js 插件开发详解",
+			"content":"随着 Vue.js 越来越火，Vue.js 的相关插件也在不断的被贡献出来，数不胜数。比如官方推荐的 vue-router、vuex 等，都是非常优秀的插件。但是我们更多的人还只停留在使用的阶段，比较少自己开发。所以接下来会通过一个简单的 vue-toast 插件，来了解掌握插件的开发和使用。",			
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (7).jpg",
+			"src":"static/img/shareimg/share-7.jpg",
+			"title":"平时自己项目中用到的 CSS",
+			"content":"css有些属性容易忘记，半天不写就要去查api，有时候api还不好使，于是还是记下来以后方便用，后续会慢慢补充进来的。",
+			"author":"霹雳天下"
+		},
+		{
+			"thumbnail":"static/thumbnail/share/share (6).jpg",
+			"src":"static/img/shareimg/share-6.jpg",
+			"title":"Vue.js 插件开发详解",
+			"content":"随着 Vue.js 越来越火，Vue.js 的相关插件也在不断的被贡献出来，数不胜数。比如官方推荐的 vue-router、vuex 等，都是非常优秀的插件。但是我们更多的人还只停留在使用的阶段，比较少自己开发。所以接下来会通过一个简单的 vue-toast 插件，来了解掌握插件的开发和使用。",			
+			"author":"霹雳天下"
+		}
+	]
+
+}
