@@ -5,12 +5,15 @@
 				<transition name='animate' appear mode='out-in'>
 					<router-view v-bind:router-data="allData" v-bind:key="change" v-on:detailback="load" v-on:jump="detailShow"></router-view>
 				</transition>
-				<div style="" v-show="allData.mainShow" style="overflow: hidden; width: 140px;height: 34px;">
-					<transition-group name='btn' appear mode="out-in"  tag="div">
-						<button v-show="back" v-bind:key="back" class="btn btn-success" v-on:click="dosom('back')">上一页</button>
-						<button v-show="next" v-bind:key="next" class="btn btn-success" v-on:click="dosom('next')">下一页</button>
-					</transition-group>
-				</div>
+				<transition name='btn' appear mode='out-in'>
+					<div style="" v-show="allData.mainShow" style="overflow: hidden; width: 140px;height: 34px;position: relative;margin-top: 15px;">
+						<button style="position: absolute;top: 0;left: 0;" v-show="back==0?false:true" v-bind:key="back" class="btn btn-success" v-on:click="dosom('back')">上一页</button>
+						<button style="position: absolute;bottom: 0;right: 0;" v-show="next==0?false:true" v-bind:key="next" class="btn btn-success" v-on:click="dosom('next')">下一页</button>
+					</div>
+				</transition>
+			</div>
+			<div v-show="loading" style="position: fixed;">
+				<img src="../static/loading/loading.gif" alt="" />
 			</div>
 		</div>
 	</div>
@@ -18,7 +21,7 @@
 <script>
 	import router from './router'
 	export default{
-		data:function(){
+		data:function(){ 
 			return{
 				allData:{
 					showData:null,
@@ -27,13 +30,13 @@
 					list:0,
 					mainShow:true
 				},
+				loading:false,
 				change:true,
 				back:0,
-				next:1
+				next:1,
 			}
 		},
 		beforeMount:function(){
-//			(this.$route.path.length!=9 && this.$route.path.length!=13)?router.push("/user/error"):null;
 			this.routePath();
 			
 		},
@@ -53,10 +56,8 @@
 				this.buttonToggle();
 				//当前user/当前页面/当前页面路由
 				router.push(this.$route.path.slice(0,8)+this.allData.num);
-				this.load();
 			},
 			routePath:function(){
-				console.log(this.$route.fullPath);
 				if(this.$route.fullPath=="/"){
 					router.push("/user/0/0");
 					this.load();
@@ -66,15 +67,19 @@
 				}
 				else{
 					router.push("/user/error");
+					this.back=0;
+					this.next=0;
 				}
 			},
 			load:function(){
 				var vmThis=this,
 					numData=null,
 					listData=null;
-				// /user/当前页面/numData
+					
+				// /user/lisData/numData
 				numData=this.$route.path.slice(8,9);
 				listData=this.$route.path.slice(6,7);
+				
 				// 初始化
 				this.allData.num=numData;
 				this.buttonToggle();
@@ -99,8 +104,7 @@
 				}
 			},
 			detailShow:function(obj,index){
-				router.push({path:this.$route.path+"/con",query:{num:this.$route.query.num,type:index}});
-				this.load();
+				router.push({path:this.$route.path+"/con",query:{type:index}});
 			}
 		}
 	}
@@ -120,7 +124,7 @@
 	}
 	
 	.btn-enter-active,.btn-leave-active{
-		transition: all 0.5s ease;
+		transition: all 1s ease;
 	}
 	.btn-enter{
 		opacity: 0;

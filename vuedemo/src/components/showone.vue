@@ -11,12 +11,6 @@
 					</div>
 				</div>
 			</nav>
-			<!--<div>
-				<ul>
-					<li><a v-bind:class="{activeBg:isActive==0}" v-on:click='link(0)'>首页</a></li>
-					<li><a v-bind:class="{activeBg:isActive==1}" v-on:click='link(1)'>页面一</a></li>
-				</ul>
-			</div>-->
 			<div class='media' v-for='(item,index) in routerData.showData' v-on:click='go(item,index)'>
 				<div>
 					<div class='media-left'>
@@ -43,6 +37,7 @@
 		},
 		methods:{
 			go:function(obj,index){
+				//ajapp中jump函数传递index
 				this.$emit("jump",obj,index);
 			},
 			detailback:function(){
@@ -50,7 +45,6 @@
 			},
 			link:function(num){
 				var listNum=this.$route.path.slice(6,7);
-				console.log(this.$route.path);
 				if(listNum!=num){
 					console.log("ok");
 					router.push("/user/"+num+"/0");
