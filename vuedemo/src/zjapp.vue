@@ -5,8 +5,8 @@
 				<transition name='animate' appear mode='out-in'>
 					<router-view v-bind:router-data="allData" v-bind:key="change" v-on:detailback="load" v-on:jump="detailShow"></router-view>
 				</transition>
-				<div style="" v-show="allData.mainShow">
-					<transition-group name='animate' appear mode='out-in' tag="div">
+				<div style="" v-show="allData.mainShow" style="overflow: hidden; width: 140px;height: 34px;">
+					<transition-group name='btn' appear mode="out-in"  tag="div">
 						<button v-show="back" v-bind:key="back" class="btn btn-success" v-on:click="dosom('back')">上一页</button>
 						<button v-show="next" v-bind:key="next" class="btn btn-success" v-on:click="dosom('next')">下一页</button>
 					</transition-group>
@@ -33,14 +33,19 @@
 			}
 		},
 		beforeMount:function(){
-			this.$route.path=="/"?router.push("/user/0/0"):null;
-			this.load();
+//			(this.$route.path.length!=9 && this.$route.path.length!=13)?router.push("/user/error"):null;
+			this.routePath();
+			
+		},
+		watch:{
+			"$route":function(to){
+				this.routePath();
+			}
 		},
 		methods:{
 			buttonToggle:function(){
 				var nowNum=this.allData.num;
 				this.back=nowNum;
-				console.log(this.back);
 				this.next=2-nowNum;
 			},
 			dosom:function(str){
@@ -49,6 +54,19 @@
 				//当前user/当前页面/当前页面路由
 				router.push(this.$route.path.slice(0,8)+this.allData.num);
 				this.load();
+			},
+			routePath:function(){
+				console.log(this.$route.fullPath);
+				if(this.$route.fullPath=="/"){
+					router.push("/user/0/0");
+					this.load();
+				}
+				else if(this.$route.fullPath.length==9 || this.$route.fullPath.length==20){
+					this.load();
+				}
+				else{
+					router.push("/user/error");
+				}
 			},
 			load:function(){
 				var vmThis=this,
@@ -100,4 +118,15 @@
 		transform: translateX(50px);
 		opacity: 0;
 	}
+	
+	.btn-enter-active,.btn-leave-active{
+		transition: all 0.5s ease;
+	}
+	.btn-enter{
+		opacity: 0;
+	}
+	.btn-leave-active{
+		opacity: 0;
+	}
+	
 </style>

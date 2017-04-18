@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import VueResource from 'vue-resource'
 import tem from '@/components/showone'
 import tem_cont from '@/components/showtwo'
+import tem_error from '@/components/error'
 
 //安装插件
 Vue.use(Router)
@@ -19,6 +20,10 @@ export default new Router({
 					component:tem_cont
 				}
 			]
+		},
+		{
+			path:"/user/error",
+			component:tem_error
 		}
 	]
 })

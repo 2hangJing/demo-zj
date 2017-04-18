@@ -1,19 +1,22 @@
 <template>
-	<div style='cursor:pointer;' >
+	<div style='cursor:pointer;height: 867px;' >
 		<div v-show='routerData.mainShow'>
 			<nav class='navbar navbar-default'>
-				<div class='container'>
-					<div class='navbar-header'>
-						<a class='navbar-brand' v-on:click='link(0)'>首页</a>
-					</div>
-					<div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
-						<ul class='nav navbar-nav'>
-							<li><a v-on:click='link(1)'>页面一</a></li>
-							<li><a v-on:click='link(2)'>页面二</a></li>
+				<div class='container' style="padding: 0;">
+					<div class='collapse navbar-collapse' style="padding: 0;">
+						<ul class='nav navbar-nav test'>
+							<li><a v-bind:class="{activeBg:isActive==0}" v-on:click='link(0)'>首页</a></li>
+							<li><a v-bind:class="{activeBg:isActive==1}" v-on:click='link(1)'>页面一</a></li>
 						</ul>
 					</div>
 				</div>
 			</nav>
+			<!--<div>
+				<ul>
+					<li><a v-bind:class="{activeBg:isActive==0}" v-on:click='link(0)'>首页</a></li>
+					<li><a v-bind:class="{activeBg:isActive==1}" v-on:click='link(1)'>页面一</a></li>
+				</ul>
+			</div>-->
 			<div class='media' v-for='(item,index) in routerData.showData' v-on:click='go(item,index)'>
 				<div>
 					<div class='media-left'>
@@ -33,6 +36,11 @@
 	import router from '.././router'
 	export default{
 		props:["routerData"],
+		data(){
+			return {
+				isActive:this.$route.path.slice(6,7)
+			}
+		},
 		methods:{
 			go:function(obj,index){
 				this.$emit("jump",obj,index);
@@ -41,7 +49,13 @@
 				this.$emit("detailback");
 			},
 			link:function(num){
-				router.push("/user/"+num+"/0");
+				var listNum=this.$route.path.slice(6,7);
+				console.log(this.$route.path);
+				if(listNum!=num){
+					console.log("ok");
+					router.push("/user/"+num+"/0");
+					this.isActive=this.$route.path.slice(6,7);
+				}
 			}
 		},
 		filters:{
@@ -50,11 +64,21 @@
 				return newMessage;
 			}
 		},
-		watch:{
-			"$route":function(){
-				this.detailback();
-			}
-		}
+//		watch:{
+//			"$route":function(){
+//				this.detailback();
+//			}
+//		}
 	}
 </script>
-<style></style>
+<style>
+	.activeBg{
+		background-color: teal;
+		color: white !important;
+		transition: 0.5s all ease-in;
+	}
+	.test :hover{
+		background-color: cornsilk;
+		color: black !important;
+	}
+</style>
