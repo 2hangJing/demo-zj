@@ -14,7 +14,7 @@
 	export default{
 		props:["routerNesting"],
 		methods:{
-			back:function(){
+			back(){
 				router.push(this.$route.path.slice(0,9));
 			}
 		}

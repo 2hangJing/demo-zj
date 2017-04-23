@@ -71,8 +71,7 @@
 				}
 			},
 			load(){
-				var vmThis=this,
-					numData=null,
+				var numData=null,
 					listData=null;
 					
 				// /user/lisData/numData

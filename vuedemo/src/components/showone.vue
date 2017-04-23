@@ -36,14 +36,14 @@
 			}
 		},
 		methods:{
-			go:function(obj,index){
+			go(obj,index){
 				//ajapp中jump函数传递index
 				this.$emit("jump",obj,index);
 			},
-			detailback:function(){
+			detailback(){
 				this.$emit("detailback");
 			},
-			link:function(num){
+			link(num){
 				var listNum=this.$route.path.slice(6,7);
 				if(listNum!=num){
 					router.push("/user/"+num+"/0");
@@ -52,7 +52,7 @@
 			}
 		},
 		filters:{
-			more:function(value){
+			more(value){
 				var newMessage=value.slice(0,40)+"........点击查看更多";
 				return newMessage;
 			}
