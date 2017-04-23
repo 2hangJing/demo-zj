@@ -21,7 +21,7 @@
 <script>
 	import router from './router'
 	export default{
-		data:function(){ 
+		data(){ 
 			return{
 				allData:{
 					showData:null,
@@ -36,28 +36,27 @@
 				next:1,
 			}
 		},
-		beforeMount:function(){
+		beforeMount(){
 			this.routePath();
-			
 		},
 		watch:{
-			"$route":function(to){
+			"$route"(to){
 				this.routePath();
 			}
 		},
 		methods:{
-			buttonToggle:function(){
+			buttonToggle(){
 				var nowNum=this.allData.num;
 				this.back=nowNum;
 				this.next=2-nowNum;
 			},
-			dosom:function(str){
+			dosom(str){
 				str=="next"?this.allData.num++:this.allData.num--;
 				this.buttonToggle();
 				//当前user/当前页面/当前页面路由
 				router.push(this.$route.path.slice(0,8)+this.allData.num);
 			},
-			routePath:function(){
+			routePath(){
 				if(this.$route.fullPath=="/"){
 					router.push("/user/0/0");
 					this.load();
@@ -71,7 +70,7 @@
 					this.next=0;
 				}
 			},
-			load:function(){
+			load(){
 				var vmThis=this,
 					numData=null,
 					listData=null;
@@ -87,23 +86,26 @@
 				if(this.$route.path.indexOf("con")>0){
 					//获取list中第几个
 					var typeData=this.$route.query.type;
-					this.$nextTick(function(){
-						vmThis.$http.get("static/data-"+listData+".json").then(function(rea){
+					this.$nextTick(e=>{
+						this.$http.get("static/data-"+listData+".json").then(rea=>{
+							//vue-resource加载数据存在于data.body中
 							var listNum=rea.body.allData.slice(numData*6,numData*6+6);
-							vmThis.allData.detailedData=listNum.slice(typeData,typeData+1)[0];
+							
+							//详细显示页面数据来源
+							this.allData.detailedData=listNum.slice(typeData,typeData+1)[0];
 						});
 					});
 					this.allData.mainShow=false;
 				}else{
-					this.$nextTick(function(){
-						vmThis.$http.get("static/data-"+listData+".json").then(function(rea){
-							vmThis.allData.showData=rea.body.allData.slice(numData*6,numData*6+6);
+					this.$nextTick(e=>{
+						this.$http.get("static/data-"+listData+".json").then(rea=>{
+							this.allData.showData=rea.body.allData.slice(numData*6,numData*6+6);
 						});
 					});
 					this.allData.mainShow=true;
 				}
 			},
-			detailShow:function(obj,index){
+			detailShow(obj,index){
 				router.push({path:this.$route.path+"/con",query:{type:index}});
 			}
 		}
@@ -111,6 +113,7 @@
 	
 </script>
 <style>
+	/*切换中动画*/
 	.animate-enter-active,.animate-leave-active{
 		transition: all 0.5s ease;
 	}
@@ -122,7 +125,7 @@
 		transform: translateX(50px);
 		opacity: 0;
 	}
-	
+	/*底部按钮简单动画*/
 	.btn-enter-active,.btn-leave-active{
 		transition: all 1s ease;
 	}
