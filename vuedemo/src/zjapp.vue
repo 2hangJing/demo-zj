@@ -11,9 +11,9 @@
 						<button style="position: absolute;bottom: 0;right: 0;" v-show="next==0?false:true" v-bind:key="next" class="btn btn-success" v-on:click="dosom('next')">下一页</button>
 					</div>
 				</transition>
-			</div>
-			<div v-show="loading" style="position: fixed;">
-				<img src="../static/loading/loading.gif" alt="" />
+				<div v-show="loading" style="position: fixed;background-color: rgb(255,255,255);height: 100%;width: 100%;top:0;left: 0;background-color: tan;">
+					<img src="../static/loading/loading.gif" style="position: absolute; top: 0;bottom: 0;left: 0;right: 0;display: block;" alt="" />
+				</div>
 			</div>
 		</div>
 	</div>
@@ -87,19 +87,31 @@
 					var typeData=this.$route.query.type;
 					this.$nextTick(e=>{
 						this.$http.get("static/data-"+listData+".json").then(rea=>{
-							//vue-resource加载数据存在于data.body中
-							var listNum=rea.body.allData.slice(numData*6,numData*6+6);
+							this.loading=true;
+							setTimeout(e=>{
 							
-							//详细显示页面数据来源
-							this.allData.detailedData=listNum.slice(typeData,typeData+1)[0];
+								//vue-resource加载数据存在于data.body中
+								var listNum=rea.body.allData.slice(numData*6,numData*6+6);
+								
+								//详细显示页面数据来源
+								this.allData.detailedData=listNum.slice(typeData,typeData+1)[0];
+								
+								this.loading=false;
+								
+							},600);
 						});
+							
 					});
 					this.allData.mainShow=false;
 				}else{
 					this.$nextTick(e=>{
-						this.$http.get("static/data-"+listData+".json").then(rea=>{
-							this.allData.showData=rea.body.allData.slice(numData*6,numData*6+6);
-						});
+						this.loading=true;
+						setTimeout(e=>{
+							this.$http.get("static/data-"+listData+".json").then(rea=>{
+								this.allData.showData=rea.body.allData.slice(numData*6,numData*6+6);
+								this.loading=false;
+							});
+						},600);
 					});
 					this.allData.mainShow=true;
 				}
