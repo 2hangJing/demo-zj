@@ -4,7 +4,7 @@
 			<nav class='navbar navbar-default'>
 				<div class='container' style="padding: 0;">
 					<div class='collapse navbar-collapse' style="padding: 0;">
-						<ul class='nav navbar-nav test'>
+						<ul class='nav navbar-nav userNav'>
 							<li><a v-bind:class="{activeBg:isActive==0}" v-on:click='link(0)'>首页</a></li>
 							<li><a v-bind:class="{activeBg:isActive==1}" v-on:click='link(1)'>页面一</a></li>
 						</ul>
@@ -46,7 +46,6 @@
 			link:function(num){
 				var listNum=this.$route.path.slice(6,7);
 				if(listNum!=num){
-					console.log("ok");
 					router.push("/user/"+num+"/0");
 					this.isActive=this.$route.path.slice(6,7);
 				}
@@ -57,12 +56,7 @@
 				var newMessage=value.slice(0,40)+"........点击查看更多";
 				return newMessage;
 			}
-		},
-//		watch:{
-//			"$route":function(){
-//				this.detailback();
-//			}
-//		}
+		}
 	}
 </script>
 <style>
@@ -71,7 +65,7 @@
 		color: white !important;
 		transition: 0.5s all ease-in;
 	}
-	.test :hover{
+	.userNav :hover{
 		background-color: cornsilk;
 		color: black !important;
 	}

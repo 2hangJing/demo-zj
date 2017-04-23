@@ -11,7 +11,7 @@
 	import router from '.././router'
 	export default{
 		methods:{
-			jump:function(num){
+			jump(num){
 				num==0?router.push("/user/0/0"):router.push("/user/1/0");
 			}
 		}
