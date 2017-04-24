@@ -6,12 +6,12 @@
 					<router-view v-bind:router-data="allData" v-bind:key="change" v-on:detailback="load" v-on:jump="detailShow"></router-view>
 				</transition>
 				<transition name='btn' appear mode='out-in'>
-					<div style="" v-show="allData.mainShow" style="overflow: hidden; width: 140px;height: 34px;position: relative;margin-top: 15px;">
-						<button style="position: absolute;top: 0;left: 0;" v-show="back==0?false:true" v-bind:key="back" class="btn btn-success" v-on:click="dosom('back')">上一页</button>
-						<button style="position: absolute;bottom: 0;right: 0;" v-show="next==0?false:true" v-bind:key="next" class="btn btn-success" v-on:click="dosom('next')">下一页</button>
+					<div class="app-btn" v-show="allData.mainShow">
+						<button class="btn btn-success app-btn-back" v-show="back==0?false:true" v-bind:key="back" v-on:click="dosom('back')">上一页</button>
+						<button class="btn btn-success app-btn-next" v-show="next==0?false:true" v-bind:key="next" v-on:click="dosom('next')">下一页</button>
 					</div>
 				</transition>
-				<div v-show="loading" style="position: fixed;background-color: rgb(255,255,255);height: 100%;width: 100%;top:0;left: 0;background-color: tan;">
+				<div class="app-loading" v-show="loading">
 					<img src="../static/loading/loading.gif" style="margin:0 auto;display: block;" alt="" />
 				</div>
 			</div>
@@ -27,7 +27,6 @@
 					showData:null,
 					detailedData:{},
 					num:0,
-					list:0,
 					mainShow:true
 				},
 				loading:false,
@@ -89,13 +88,14 @@
 						this.$http.get("static/data-"+listData+".json").then(rea=>{
 							this.loading=true;
 							setTimeout(e=>{
-								this.loading=false;
 								
 								//vue-resource加载数据存在于data.body中
 								var listNum=rea.body.allData.slice(numData*6,numData*6+6);
 								
 								//详细显示页面数据来源
 								this.allData.detailedData=listNum.slice(typeData,typeData+1)[0];
+								
+								this.loading=false;
 							},700);
 						});
 							
@@ -106,8 +106,9 @@
 						this.loading=true;
 						setTimeout(e=>{
 							this.$http.get("static/data-"+listData+".json").then(rea=>{
-								this.loading=false;
+								
 								this.allData.showData=rea.body.allData.slice(numData*6,numData*6+6);
+								this.loading=false;
 							});
 						},700);
 					});
@@ -119,7 +120,6 @@
 			}
 		}
 	}
-	
 </script>
 <style>
 	/*切换中动画*/
@@ -145,4 +145,36 @@
 		opacity: 0;
 	}
 	
+	
+	/*back,next btn-class*/
+	.app-btn{
+		overflow: hidden; 
+		width: 140px;
+		height: 34px;
+		position: relative;
+		margin-top: 15px;
+	}
+	/*back btn-class*/
+	.app-btn-back{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	/*next btn-class*/
+	.app-btn-next{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	
+	
+	/*loading*/
+	.app-loading{
+		background-color: tan;
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top:0;
+	}
 </style>
