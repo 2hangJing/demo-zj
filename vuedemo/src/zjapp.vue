@@ -3,7 +3,7 @@
 		<div class="row">
 			<div id="index" class="col-xs-12 col-lg-12 col-md-12" style="padding: 0;">
 				<transition name='animate' appear mode='out-in'>
-					<router-view v-bind:router-data="allData" v-bind:key="change" v-on:jump="detailShow"></router-view>
+					<router-view v-bind:router-data="allData" v-bind:key="change"></router-view>
 				</transition>
 				<transition name='btn' appear mode='out-in'>
 					<div class="app-btn" v-show="allData.mainShow">
@@ -114,9 +114,6 @@
 					});
 					this.allData.mainShow=true;
 				}
-			},
-			detailShow(obj,index){
-				router.push({path:this.$route.path+"/con",query:{type:index}});
 			}
 		}
 	}

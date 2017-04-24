@@ -37,8 +37,7 @@
 		},
 		methods:{
 			go(obj,index){
-				//ajapp中jump函数传递index
-				this.$emit("jump",obj,index);
+				router.push({path:this.$route.path+"/con",query:{type:index}});
 			},
 			link(num){
 				var listNum=this.$route.path.slice(6,7);
