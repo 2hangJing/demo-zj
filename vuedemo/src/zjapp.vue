@@ -3,7 +3,7 @@
 		<div class="row">
 			<div id="index" class="col-xs-12 col-lg-12 col-md-12" style="padding: 0;">
 				<transition name='animate' appear mode='out-in'>
-					<router-view v-bind:router-data="allData" v-bind:key="change" v-on:detailback="load" v-on:jump="detailShow"></router-view>
+					<router-view v-bind:router-data="allData" v-bind:key="change" v-on:jump="detailShow"></router-view>
 				</transition>
 				<transition name='btn' appear mode='out-in'>
 					<div class="app-btn" v-show="allData.mainShow">

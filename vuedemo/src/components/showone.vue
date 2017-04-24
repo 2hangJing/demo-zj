@@ -40,9 +40,6 @@
 				//ajapp中jump函数传递index
 				this.$emit("jump",obj,index);
 			},
-			detailback(){
-				this.$emit("detailback");
-			},
 			link(num){
 				var listNum=this.$route.path.slice(6,7);
 				if(listNum!=num){
