@@ -1,5 +1,5 @@
 <template>
-	<div style='height:800px;margin-top:100px'>
+	<div style='height:700px;padding-top:100px'>
 		<div>
 			<img v-bind:src='routerNesting.detailedData.src' style='display:block;margin:0 auto;width:500px'>
 			<br>

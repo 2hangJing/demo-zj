@@ -12,7 +12,7 @@
 					</div>
 				</transition>
 				<div v-show="loading" style="position: fixed;background-color: rgb(255,255,255);height: 100%;width: 100%;top:0;left: 0;background-color: tan;">
-					<img src="../static/loading/loading.gif" style="position: absolute; top: 0;bottom: 0;left: 0;right: 0;display: block;" alt="" />
+					<img src="../static/loading/loading.gif" style="margin:0 auto;display: block;" alt="" />
 				</div>
 			</div>
 		</div>
@@ -89,16 +89,14 @@
 						this.$http.get("static/data-"+listData+".json").then(rea=>{
 							this.loading=true;
 							setTimeout(e=>{
-							
+								this.loading=false;
+								
 								//vue-resource加载数据存在于data.body中
 								var listNum=rea.body.allData.slice(numData*6,numData*6+6);
 								
 								//详细显示页面数据来源
 								this.allData.detailedData=listNum.slice(typeData,typeData+1)[0];
-								
-								this.loading=false;
-								
-							},600);
+							},700);
 						});
 							
 					});
@@ -108,10 +106,10 @@
 						this.loading=true;
 						setTimeout(e=>{
 							this.$http.get("static/data-"+listData+".json").then(rea=>{
-								this.allData.showData=rea.body.allData.slice(numData*6,numData*6+6);
 								this.loading=false;
+								this.allData.showData=rea.body.allData.slice(numData*6,numData*6+6);
 							});
-						},600);
+						},700);
 					});
 					this.allData.mainShow=true;
 				}
@@ -129,11 +127,11 @@
 		transition: all 0.5s ease;
 	}
 	.animate-enter{
-		transform: translateX(-50px);
+		transform: translateX(-80px);
 		opacity: 0;
 	}
 	.animate-leave-active{
-		transform: translateX(50px);
+		transform: translateX(80px);
 		opacity: 0;
 	}
 	/*底部按钮简单动画*/
