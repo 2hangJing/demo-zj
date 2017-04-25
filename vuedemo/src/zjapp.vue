@@ -7,8 +7,8 @@
 				</transition>
 				<transition name='btn' appear mode='out-in'>
 					<div class="app-btn" v-show="allData.mainShow">
-						<button class="btn btn-success app-btn-back" v-show="back==0?false:true" v-bind:key="back" v-on:click="dosom('back')">上一页</button>
-						<button class="btn btn-success app-btn-next" v-show="next==0?false:true" v-bind:key="next" v-on:click="dosom('next')">下一页</button>
+						<button class="btn btn-success app-btn-back" v-show="back==0?false:true" v-on:click="dosom('back')">上一页</button>
+						<button class="btn btn-success app-btn-next" v-show="next==0?false:true" v-on:click="dosom('next')">下一页</button>
 					</div>
 				</transition>
 				<div class="app-loading" v-show="loading">
