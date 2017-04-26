@@ -81,6 +81,7 @@
 				this.allData.num=numData;
 				this.buttonToggle();
 				this.change=!this.change;
+				
 				if(this.$route.path.indexOf("con")>0){
 					//获取list中第几个
 					var typeData=this.$route.query.type;
