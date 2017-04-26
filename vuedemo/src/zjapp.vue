@@ -35,7 +35,7 @@
 				next:1,
 			}
 		},
-		beforeMount(){
+		created(){
 			this.routePath();
 		},
 		watch:{
