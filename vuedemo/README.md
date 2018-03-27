@@ -1,5 +1,6 @@
 # vuedemo
 
+> 废弃！！！ 移步 https://github.com/2hangJing/my_Web/tree/master/My-Web 比较完整的Vue项目
 > A Vue.js project
 
 ## Build Setup
